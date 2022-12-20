@@ -6,8 +6,8 @@ module.exports = (logSources, printer) => {
   // Drain all logs
   let sortedLogSources = []
   for (let i = 0; i < logSources.length; i++) {
-    let log = logSources[i].pop()
-    sortedLogSources.push(log)
+    let log = logSources[i].pop();
+    sortedLogSources.push(log);
   }
 
   // Sort logs chronologically
@@ -15,8 +15,10 @@ module.exports = (logSources, printer) => {
 
   // Print all log entries chronologically
   for (let i = 0; i < sortedLogSources.length; i++) {
-    printer.print(sortedLogSources[i])
+    printer.print(sortedLogSources[i]);
   }
-  printer.done()
+
+  printer.done();
+
   return console.log("Sync sort complete.");
 };
